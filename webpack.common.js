@@ -24,14 +24,12 @@ module.exports = {
         }
       },
       {
-        test: /\.(ico|jpg|png)$/,
-        use: [{ loader: 'file-loader', options: {} }]
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
-        test: /\.svg/,
-        use: {
-          loader: 'svg-url-loader'
-        }
+        test: /\.(ico|jpg|png)$/,
+        use: [{ loader: 'file-loader', options: {} }]
       }
     ]
   },
